@@ -1,0 +1,103 @@
+/*  CSS for Sunnies Face
+    Full Name: Dixie Maniquis
+	Section: WD-202
+	Activity: about
+	Date: July 29, 2026
+*/
+
+/* CSS Reset */
+body, header, nav, main, footer, h1, div, img {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* CSS Styles for body and image */
+body {
+    background-color: #FDFAF6;
+}
+
+img {
+    margin: 0 auto;
+    max-width: 100%;
+    display: block;
+}
+
+/*CSS styles for header */
+header {
+    width: 25%;
+    float: left;
+}
+
+/*CSS Styles for navigation */
+nav {
+    width: 70%;
+    float: right;
+    margin: 5em 3em 0 0; 
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    text-align: left;
+}
+
+nav li {
+    display: inline-block;
+    font-size: 1em;
+    font-family: Verdana, Arial, sans-serif;
+    font-weight: bold;
+}
+
+nav li a {
+    display: block;
+    color: #BD4444;
+    text-align: center;
+    padding: 0.5em 1em;
+    text-decoration: none;
+}
+
+/* CSS Styles for main content */
+main {
+    clear: left;
+    background-color: #F1DEC4;
+    padding: 2%;
+    font-size: 1.25em;
+}
+
+#Face, #Lips, #Eyes {
+    width: 29%;
+    float: left;
+    margin: 0 1%;
+}
+
+#contact {
+    text-align: center;
+}
+
+#contact a {
+    color: #666666;
+    text-decoration: none;
+}
+
+.action {
+    font-size: 1.35em;
+    color: #BD4444;
+    font-weight: bold;
+}
+
+.map {
+    border: 8px solid #000;
+}
+
+/*CSS Styles for footer */
+footer p {
+    font-size: 0.75em;
+    text-align: center;
+    color: #BFC6C4;
+    padding: 0.1em;
+}
+
+footer p a {
+    color: #BFC6C4;
+}
