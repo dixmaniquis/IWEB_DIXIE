@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Git Field Notes</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav id="navbar">
+  <header>Git Field Notes</header>
+  <a class="nav-link" href="#Introduction">Introduction</a>
+  <a class="nav-link" href="#Getting_a_Repository">Getting a Repository</a>
+  <a class="nav-link" href="#The_Basic_Workflow">The Basic Workflow</a>
+  <a class="nav-link" href="#Branching_and_Merging">Branching and Merging</a>
+  <a class="nav-link" href="#Working_with_Remotes">Working with Remotes</a>
+  <a class="nav-link" href="#Undoing_Things">Undoing Things</a>
+  <a class="nav-link" href="#Good_Habits">Good Habits</a>
+</nav>
+
+<main id="main-doc">
+
+  <section class="main-section" id="Introduction">
+    <header>Introduction</header>
+    <p>Git tracks changes to a set of files over time. Instead of saving one file at a time, it records the full state of a project as a series of snapshots, so you can move backward and forward through the history of what you built.</p>
+    <p>Unlike tools that keep a single shared history on a server, Git gives every clone of a project its own complete copy of that history. You can commit, branch, and inspect the past entirely offline, and sync with others only when you choose to.</p>
+    <p>This page walks through the commands you will reach for most often: setting up a repository, saving work, branching, collaborating through a remote, and reversing mistakes.</p>
+  </section>
+
+  <section class="main-section" id="Getting_a_Repository">
+    <header>Getting a Repository</header>
+    <p>There are two common starting points: turning an existing folder into a repository, or copying one that already exists somewhere else.</p>
+    <p>Run the following inside any project folder to begin tracking it:</p>
+    <pre><code>git init</code></pre>
+    <p>To download a full history from somewhere else, use <code>clone</code> instead of starting from scratch:</p>
+    <pre><code>git clone https://example.com/team/project.git</code></pre>
+    <ul>
+      <li>A fresh <code>git init</code> repository has no commits yet.</li>
+      <li>A cloned repository arrives with the entire commit history already present.</li>
+      <li>Both approaches produce an ordinary working copy, so there is no difference afterward.</li>
+    </ul>
+  </section>
+
+  <section class="main-section" id="The_Basic_Workflow">
+    <header>The Basic Workflow</header>
+    <p>Git separates the act of editing a file from the act of recording that edit. Changes move through three stages: the working directory, the staging area, and the committed history.</p>
+    <p>Check which files have changed and which stage they're in at any time:</p>
+    <pre><code>git status</code></pre>
+    <p>Move a changed file into the staging area, then record it permanently:</p>
+    <pre><code>git add notes.md
+git commit -m "Add first draft of the notes"</code></pre>
+    <p>A message that explains why a change was made is far more useful later than one that only restates what changed.</p>
+    <p>The full timeline of commits can be viewed with:</p>
+    <pre><code>git log --oneline</code></pre>
+  </section>
+
+  <section class="main-section" id="Branching_and_Merging">
+    <header>Branching and Merging</header>
+    <p>A branch is simply a movable pointer to a commit. Creating one lets you try an idea without touching the work everyone else sees.</p>
+    <pre><code>git branch experiment
+git switch experiment</code></pre>
+    <p>Once the work on a branch is ready, bring it back into the main line of development with a merge:</p>
+    <pre><code>git switch main
+git merge experiment</code></pre>
+    <p>Most merges combine automatically. Occasionally the same lines were changed on both branches, producing a conflict that Git cannot resolve on its own, and the file must be edited by hand before it can be committed.</p>
+    <ul>
+      <li>Branches are cheap to create and cost no real disk space up front.</li>
+      <li>Deleting a branch after it's merged keeps the branch list readable.</li>
+      <li>A branch name is just a label; the commits it points to are what actually matter.</li>
+    </ul>
+  </section>
+
+  <section class="main-section" id="Working_with_Remotes">
+    <header>Working with Remotes</header>
+    <p>A remote is a version of your repository hosted somewhere else, most often a shared server that your collaborators also connect to.</p>
+    <p>List the remotes a repository already knows about:</p>
+    <pre><code>git remote -v</code></pre>
+    <p>Send local commits to the remote so others can see them:</p>
+    <pre><code>git push origin main</code></pre>
+    <p>Bring down commits made by others and merge them into your current branch:</p>
+    <pre><code>git pull origin main</code></pre>
+    <p>If your local history and the remote's have both moved forward independently, a plain pull may open a merge. Many teams prefer to rebase instead, which replays local commits on top of the latest remote history.</p>
+  </section>
+
+  <section class="main-section" id="Undoing_Things">
+    <header>Undoing Things</header>
+    <p>Mistakes are routine, and Git offers several ways to walk them back depending on how far the change has traveled.</p>
+    <p>Discard edits to a file and return it to its last committed state:</p>
+    <pre><code>git restore notes.md</code></pre>
+    <p>Create a new commit that reverses an earlier one, leaving history intact:</p>
+    <pre><code>git revert a1b2c3d</code></pre>
+    <p><code>git reset --hard</code> rewrites history and discards work permanently, so <code>revert</code> is usually the safer choice once a commit has already been shared with anyone else.</p>
+  </section>
+
+  <section class="main-section" id="Good_Habits">
+    <header>Good Habits</header>
+    <p>A few habits tend to separate a repository that's pleasant to work in from one that's a chore to untangle later.</p>
+    <ul>
+      <li>Commit small, focused changes rather than one enormous batch at the end of the day.</li>
+      <li>Write commit messages in the present tense, as an instruction: "Fix off-by-one error," not "fixed."</li>
+      <li>Keep a <code>.gitignore</code> file so build artifacts and local settings never get committed by accident.</li>
+      <li>Pull before you start new work to reduce the odds of a conflict later.</li>
+    </ul>
+    <p>None of this is enforced by the tool itself. Git is happy to let a history be as messy as you allow it to be, so the discipline is entirely up to the people using it.</p>
+  </section>
+
+</main>
+
+</body>
+</html>
