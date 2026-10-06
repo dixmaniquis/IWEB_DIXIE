@@ -119,4 +119,16 @@ nav li a {
 
 .hero-text {
     position: absolute;
+    z-index: 2;
+    left: 30px;
+    bottom: 25px;
+    color: #FFF;
+}
+
+.hero-text h1 {
+    font-family: "Bodoni Moda", serif;
+    font-size: 46px;
+    font-weight: 600;
+    line-height: 75px;
+    margin-bottom: 2px;
 }
