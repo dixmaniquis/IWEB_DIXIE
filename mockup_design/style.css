@@ -486,3 +486,23 @@ nav li a {
     font-weight: 400;
     cursor: pointer;
 }
+
+/*---------- Socials ----------*/
+
+.socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    padding: 40px;
+    background-color: #F8F5EF;
+}
+
+.socials a img {
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+}
+
+
+/*---------- Footer -----------*/
