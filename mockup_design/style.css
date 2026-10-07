@@ -417,8 +417,10 @@ nav li a {
 
 .experience {
     display: flex;
+    align-items: center;
     width: 100%;
-    min-height: 450px;
+    min-height: 400px;
+    padding: 50px 4%;
     background-color: #F0E6D7;
 }
 
@@ -431,6 +433,8 @@ nav li a {
     height: 100%;
     display: block;
     object-fit: contain;
+    border-radius: 30px;
+    filter: brightness(55%);
 }
 
 .experience-text {
@@ -439,6 +443,7 @@ nav li a {
     flex-direction: column;
     justify-content: center;
     padding: 60px;
+    transform: translateX(100px);
 }
 
 .experience-text > p:first-child {
@@ -456,6 +461,7 @@ nav li a {
     margin-bottom: 35px;
     max-width: 500px;
     line-height: 40px;
+    letter-spacing: 5%;
 }
 
 .experience-text h2 + p {
@@ -463,19 +469,20 @@ nav li a {
     font-size: 14px;
     line-height: 1.6;
     margin-bottom: 25px;
-    max-width: 350px;
+    max-width: 380px;
     line-height: 25px;
     letter-spacing: 5%;
 }
 
 .experience-text button {
     width: fit-content;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 8px;
-    background-color: #1E1E1E;
-    color: #FFFFFF;
+    padding: 10px 35px;
+    border: 2px solid rgba(63, 62, 61, 0.288);
+    border-radius: 10px;
+    background-color: #FAF7F0;
+    color: #000;
     font-family: "Montserrat", sans-serif;
-    font-size: 11px;
+    font-size: 14px;
+    font-weight: 400;
     cursor: pointer;
 }
