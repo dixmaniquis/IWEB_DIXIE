@@ -309,3 +309,108 @@ nav li a {
     height: 12.96px;
     margin-left: 30px;
 }
+
+/*---------- Features ----------*/
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    padding: 40px 10%;
+    background-color: #FAF7F0;
+}
+
+.feature {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 0 20px;
+    height: 131px;
+}
+
+.feature::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 1px;
+    height: 131px;
+    background-color: rgb(231, 223, 216);
+}
+
+.feature:nth-child(1)::after {
+    right: -30px;
+}
+
+.feature:nth-child(2)::after {
+    right: -50px;
+}
+
+.feature:nth-child(3)::after {
+    left: 350px;
+}
+
+.feature:nth-child(4)::after {
+    display: none;
+}
+
+.feature:last-child::after {
+    display: none;
+}
+
+.feature:nth-child(1) {
+    transform: translateX(-120px);
+}
+
+.feature:nth-child(2) {
+    transform: translateX(-40px);
+}
+
+.feature:nth-child(3) {
+    transform: translateX(60px);
+}
+
+.feature:nth-child(4) {
+    transform: translateX(145px);
+}
+
+.icon-circle {
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #E7DFD8;
+}
+
+.icon-circle img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+.feature-text h3 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    font-weight: 450;
+}
+
+.feature-text span {
+    display: block;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    opacity: 50%;
+    margin-top: -2px;
+    margin-bottom: 7px;
+}
+
+.feature-text p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    line-height: 1.3;
+    max-width: 180px;
+}
+
+/*---------- Experience ----------*/
