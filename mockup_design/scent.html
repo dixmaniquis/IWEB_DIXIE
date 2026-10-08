@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luméra | Scents</title>
+    <link rel = "stylesheet" href = "styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <img src = "img/logo.png" alt = "Luméra Logo">
+
+            <ul>
+                <li><a href = "home.html">Home</a></li>
+                <li><a href = "scents.html">Scents</a></li>
+                <li><a href = "about.html">About</a></li>
+                <li><a href = "contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <sections class = "scents-hero">
+            <video autoplay muted loop playsinline>
+                <source src = "img/scentpage_banner.mp4" type = "video/mp4">
+            </video>
+
+            <div class = "scents-hero-overlay"></div>
+            <div class = "scents-hero-text">
+                <h1>Explore the Luméra Collection</h1>
+                <p>Discover twelve signature fragrances, 
+                   each designed to leave a lasting impression.
+                </p>
+            </div>
+        </sections>
+    </header>
+
+    <section class = "scents-intro">
+        <h2>Timeless Scents. Endless Expressions</h2>
+        <p>Explore twelve refined fragrances 
+           thoughtfully crafted for every mood, moment, and memory.
+        </p>
+    </section>
+
+    <section class = "collection signature-collection">
+        <div class = "collection-title">
+            <span></span>
+            <h2>Signature Collection</h2>
+            <span></span>
+
+            <div class = "collection-carousel">
+                <button class = "carousel-arrow left-arrow" 
+                        aria-label = "Previous scent">
+                </button>
+
+                <div class = "scent-track">
+                    <div class = "scent-card left" data-index = "3" data-name = "Cherry Oak">
+                         <img src = "img/signature-4.jpg" alt = "Cherry Oak">
+                    </div>
+
+                    <div class = "scent-card center" data-index = "0" data-name = "Amber Veil">
+                         <img src = "img/signature-1.jpg" alt = "Amber Veil">
+                    </div>
+
+                    <div class = "scent-card right" data-index = "1" data-name = "Vanilla Eclair">
+                         <img src = "img/signature-2.jpg" alt = "Vanilla Eclair">
+                    </div>
+
+                    <div class = "scent-card hidden" data-index = "2" data-name = "Golden Santal">
+                         <img src = "img/signature-3.jpg" alt = "Golden Santal">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
