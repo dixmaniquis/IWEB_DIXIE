@@ -23,6 +23,8 @@ body {
     font-family: "Montserrat", sans-serif;
     color: #000;
     background-color: #FAF7F0;
+    overflow-x: hidden;
+
 }
 
 /*---------- Header ----------*/
@@ -493,16 +495,112 @@ nav li a {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 25px;
-    padding: 40px;
-    background-color: #F8F5EF;
+    gap: 150px;
+    padding: 100px 20px 0;
+    transform: translateY(10px);
+    background-color: #FAF7F0;
+    border-bottom: none;
+}
+
+.socials a {
+    width: 65px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #E7DFD8;
 }
 
 .socials a img {
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 35px;
     object-fit: contain;
 }
 
-
 /*---------- Footer -----------*/
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 45px 20px 20px;
+    text-align: center;
+    background-color: #FAF7F0;
+    color: #000;
+}
+
+.footer-logo {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    margin: 0 auto 35px;
+}
+
+.footer-logo span {
+    flex: 1;
+    height: 1.5px;
+    background-color: rgba(63, 62, 61, 0.288);
+}
+
+.footer-logo img {
+    width: 105px;
+}
+
+.footer-nav {
+    position: relative;
+    width: 60%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 100px;
+    padding: 20px 0;
+    margin-bottom: 35px;
+    background: none;
+    border-bottom: 1px solid rgba(63, 62, 61, 0.288);
+}
+
+.footer-nav::before {
+    content: "";
+    position: absolute;
+    width: 120%;
+    height: 1px;
+    top: 0;
+    left: -10%;
+    background-color: rgba(63, 62, 61, 0.288);
+}
+
+.footer-nav a {
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    color: #000;
+    text-decoration: none;
+}
+
+footer h3 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+    font-weight: 200;
+    margin-bottom: 1px;
+}
+
+footer p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    margin-bottom: 2px;
+}
+
+footer span {
+    font-weight: 600;
+}
+
+footer p:last-child {
+    font-size: 12px;
+    line-height: 20px;
+}
+
+footer p:last-child span {
+    text-decoration: underline;
+}
