@@ -953,14 +953,6 @@ header nav > ul {
 
 /*---------- Information Columns ----------*/
 
-.info-column h3 {
-    font-family: "Bodoni Moda", serif;
-    font-size: 27px;
-    font-weight: 600;
-    letter-spacing: 1px;
-    margin-bottom: 15px;
-}
-
 .info-column h4 {
     font-family: "Montserrat", sans-serif;
     font-size: 12px;
@@ -1065,9 +1057,8 @@ header nav > ul {
 }
 
 .retailer-list span {
-    font-family: "Bodoni Moda", serif;
-    font-size: 14px;
-    font-weight: 600;
+    font-family: "Montserrat", sans-serif;
+    font-size: 10px;
     text-align: center;
 }
 
@@ -1076,6 +1067,17 @@ header nav > ul {
     font-family: "Montserrat", sans-serif;
     font-size: 10px;
     opacity: 0.65;
+}
+
+.retailer-list span {
+    padding: 7px 12px;
+    border: 1px solid rgba(63, 62, 61, 0.288);
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.retailer-list span:hover {
+    background-color: #F0E6D7;
 }
 
 
