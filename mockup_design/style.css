@@ -853,6 +853,38 @@ header nav > ul {
     transform: scale(1.2) translate(0, -5px);
 }
 
+.scent-title {
+    display: none;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    padding: 0 10px;
+    color: #FAF7F0;
+    font-family: "Bodoni Moda", serif;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 3px;
+    z-index: 3;
+    pointer-events: none;
+}
+
+.scent-card.center .scent-title {
+    display: block;
+}
+
+.scent-title::after {
+    content: "";
+    display: block;
+    width: 245px;
+    height: 1px;
+    background-color: #FAF7F0;
+    margin: 5px auto 0;
+    opacity: 50%;
+}
+
 /*---------- Carousel Arrows ----------*/
 
 .collection-carousel .carousel-arrow {
@@ -919,6 +951,14 @@ header nav > ul {
 }
 
 .info-toggle:hover {
+    background-color: #F0E6D7;
+}
+
+.floral-collection .info-toggle {
+    background-color: #E7DFD8;
+}
+
+.floral-collection .info-toggle:hover {
     background-color: #F0E6D7;
 }
 
