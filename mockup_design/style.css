@@ -142,8 +142,8 @@ nav li a {
 .hero-text p {
     font-family: "Montserrat", sans-serif;
     font-size: 26px;
-    margin-bottom: 15px;
     font-weight: 400;
+    margin-bottom: 15px;
 }
 
 .hero-text button {
@@ -662,14 +662,43 @@ header nav > ul {
     width: 100%;
     height: 600px;
     background-color: rgba(0, 0, 0, 0.50);
-    z-index: 2;
+    z-index: 1;
     pointer-events: none;
+}
+
+/*---------- Scents Hero Text ----------*/
+
+.scents-hero-text {
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    padding: 0 20px;
+    color: #FFF;
+    text-align: center;
+}
+
+.scents-hero-text h1{
+    font-family: "Bodoni Moda", serif;
+    font-size: 48px;
+    font-weight: 800;
+    margin-bottom: -10px;
+}
+
+.scents-hero-text p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 26px;
+    font-weight: 400;
+    max-width: 800px;
+    margin: 15px auto 0;
 }
 
 /*---------- Scents Introduction ----------*/
 
 .scents-intro {
-    min-height: 250px;
+    min-height: 255px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -679,18 +708,18 @@ header nav > ul {
     background-color: #FAF7F0;
 }
 
-.scents-intro h1 {
+.scents-intro h2 {
     font-family: "Bodoni Moda", serif;
-    font-size: 38px;
+    font-size: 32px;
     font-weight: 600;
     margin-bottom: 15px;
 }
 
 .scents-intro p {
-    max-width: 700px;
+    max-width: 650px;
     font-family: "Montserrat", sans-serif;
-    font-size: 16px;
-    line-height: 1.7;
+    font-size: 20px;
+    line-height: 1;
 }
 
 /*---------- Collection Sections ----------*/
