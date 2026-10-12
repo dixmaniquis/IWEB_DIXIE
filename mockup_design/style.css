@@ -469,7 +469,6 @@ nav li a {
 .experience-text h2 + p {
     font-family: "Montserrat", sans-serif;
     font-size: 14px;
-    line-height: 1.6;
     margin-bottom: 25px;
     max-width: 380px;
     line-height: 25px;
@@ -634,7 +633,7 @@ header nav > ul {
     border-radius: 15px;
 }
 
-/*---------- Video Banner ----------*/
+/*---------- Video Hero ----------*/
 
 .scents-hero {
     position: relative;
@@ -652,7 +651,7 @@ header nav > ul {
     object-position: center;
 }
 
-/*---------- Video Banner Overlay ----------*/
+/*---------- Video Hero Overlay ----------*/
 
 .scents-hero::after {
     content: "";
@@ -1376,10 +1375,11 @@ header nav > ul {
 /*---------- ABOUTPAGE CSS ----------*/
 
 /*---------- About Hero ----------*/
+
 .about-hero {
     position: relative;
     width: 100%;
-    height: 550px;
+    height: 600px;
     overflow: hidden;
 }
 
@@ -1394,41 +1394,46 @@ header nav > ul {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.35);
+    background: rgba(0, 0, 0, 0.50);
 }
 
 .about-hero-text {
     position: absolute;
+    z-index: 3;
     top: 50%;
-    left: 10%;
-    transform: translateY(-50%);
-    z-index: 1;
-    color: #FAF7F0;
-    max-width: 650px;
+    left: 50%;
+    transform: translate(-50%, -55%);
+    width: 100%;
+    padding: 0 20px;
+    color: #FFF;
+    text-align: center;
 }
 
 .about-hero-text p:first-child {
     font-family: "Montserrat", sans-serif;
-    font-size: 13px;
-    letter-spacing: 4px;
-    margin-bottom: 20px;
+    font-size: 14px;
+    font-weight: 200;
+    letter-spacing: 2px;
+    margin-bottom: -2px;
 }
 
 .about-hero-text h1 {
-    font-family: "Cormorant Garamond", serif;
-    font-size: 55px;
-    font-weight: 500;
-    line-height: 1.1;
-    margin-bottom: 20px;
+    font-family: "Bodoni Moda", serif;
+    font-size: 48px;
+    font-weight: 800;
+    margin-bottom: -10px;
 }
 
 .about-hero-text p:last-child {
     font-family: "Montserrat", sans-serif;
-    font-size: 14px;
-    line-height: 1.8;
+    font-size: 26px;
+    font-weight: 400;
+    max-width: 800px;
+    margin: 15px auto 0;
 }
 
 /*---------- Our Story ----------*/
+
 .about-story {
     display: flex;
     align-items: center;
@@ -1438,49 +1443,57 @@ header nav > ul {
     background-color: #FAF7F0;
 }
 
-.story-text {
-    flex: 1;
-}
-
 .story-text > p:first-child,
+.philosophy-title > p,
 .craftsmanship-text > p:first-child {
     font-family: "Montserrat", sans-serif;
-    font-size: 12px;
-    letter-spacing: 3px;
-    margin-bottom: 20px;
+    font-size: 14px;
+    font-weight: 200;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
 }
 
-.story-text h2,
-.craftsmanship-text h2 {
-    font-family: "Cormorant Garamond", serif;
-    font-size: 42px;
-    font-weight: 500;
-    line-height: 1.15;
-    margin-bottom: 25px;
+.story-text h2 {
+    font-family: "Bodoni Moda", serif;
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 35px;
+    max-width: 500px;
+    line-height: 40px;
+    letter-spacing: 5%;
 }
 
-.story-text p:not(:first-child),
-.craftsmanship-text > p:not(:first-child) {
+.story-text p:not(:first-child) {
     font-family: "Montserrat", sans-serif;
     font-size: 14px;
-    line-height: 1.9;
-    color: #55514B;
-    margin-bottom: 18px;
+    line-height: 25px;
+    margin-bottom: 25px;
+    max-width: 490px;
+    letter-spacing: 5%;
+}
+
+.story-text {
+    flex: 1;
+    min-width: 0;
 }
 
 .story-image {
     flex: 1;
     min-width: 0;
+    width: 50%;
 }
 
 .story-image img {
     display: block;
-    width: 100%;
-    height: 470px;
+    width: 680px;
+    height: 455px;
     object-fit: cover;
+    border-radius: 30px;
+    filter: brightness(55%);
 }
 
 /*---------- Our Philosophy ----------*/
+
 .about-philosophy {
     padding: 85px 10%;
     background-color: #EDE7DC;
@@ -1526,47 +1539,78 @@ header nav > ul {
 }
 
 /*---------- Craftsmanship ----------*/
+
 .about-craftsmanship {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: 70px;
     padding: 100px 10%;
     background-color: #FAF7F0;
 }
 
-.craftsmanship-image {
+.craftmanship-text {
     flex: 1;
     min-width: 0;
 }
 
-.craftsmanship-image img {
-    display: block;
-    width: 100%;
-    height: 450px;
-    object-fit: cover;
+.craftsmanship-text h2 {
+    font-family: "Bodoni Moda", serif;
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 35px;
+    max-width: 400px;
+    line-height: 40px;
+    letter-spacing: 5%;
 }
 
-.craftsmanship-text {
+.craftsmanship-text > p:not(:first-child) {
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    line-height: 25px;
+    margin-bottom: 25px;
+    max-width: 393.10px;
+    letter-spacing: 5%;
+}
+
+.craftsmanship-image {
     flex: 1;
+    min-width: 0;
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.craftsmanship-image img {
+    display: block;
+    width: 680px;
+    height: 455px;
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 30px;
+    filter: brightness(55%);
+    margin-left: -90px;
 }
 
 .craftsmanship-tags {
     display: flex;
     flex-wrap: wrap;
     gap: 12px;
-    margin-top: 30px;
+    margin-top: 15px;
 }
 
 .craftsmanship-tags span {
     font-family: "Montserrat", sans-serif;
     font-size: 11px;
     padding: 10px 15px;
-    border: 1px solid #B7AA98;
-    border-radius: 30px;
-    color: #4D463D;
+    color: #000;
+    border: 1px solid rgba(63, 62, 61, 0.288);
+    border-radius: 20px;
+    background-color: #F0E6D7;
 }
 
 /*---------- Collection Call to Action ----------*/
+
 .about-collection {
     padding: 90px 20px;
     text-align: center;
@@ -1605,6 +1649,7 @@ header nav > ul {
 }
 
 /*---------- About Page Responsive Layout ----------*/
+
 @media screen and (max-width: 768px) {
     .about-hero {
         height: 430px;
