@@ -703,7 +703,7 @@ header nav > ul {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 50px 20px;
+    padding: 75px 20px;
     text-align: center;
     background-color: #FAF7F0;
 }
@@ -885,6 +885,36 @@ header nav > ul {
     opacity: 50%;
 }
 
+/*---------- Section Gradients ----------*/
+
+.collection {
+    position: relative;
+    padding-bottom: 210px;
+}
+
+.collection::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 200px;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.signature-collection::after {
+    background: linear-gradient(to bottom, #E7DFD8, #FAF7F0);
+}
+
+.floral-collection::after {
+    background: linear-gradient(to bottom, #FAF7F0, #E7DFD8);
+}
+
+.noir-collection::after {
+    background: linear-gradient(to bottom, #E7DFD8, #FAF7F0);
+}
+
 /*---------- Carousel Arrows ----------*/
 
 .collection-carousel .carousel-arrow {
@@ -981,6 +1011,7 @@ header nav > ul {
     grid-template-columns: 1.1fr 1.2fr 0.8fr;
     gap: 45px;
     margin-top: 35px;
+    margin-bottom: -55px;
     padding: 40px 30px;
     border-top: 1px solid rgba(63, 62, 61, 0.288);
     text-align: left;
@@ -1130,7 +1161,7 @@ header nav > ul {
     align-items: center;
     justify-content: center;
     padding: 60px 20px;
-    margin-top: 112px;
+    margin-top: 87px;
     text-align: center;
     background-color: #F0E6D7;
 }
@@ -1168,6 +1199,41 @@ header nav > ul {
 .scent-cta a:hover {
     background-color: #E7DFD8;
 }
+
+/*---------- Section Gradients ----------*/
+
+.collection {
+    position: relative;
+    padding-bottom: 210px;
+}
+
+.collection::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 200px;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.signature-collection::after {
+    background: linear-gradient(to bottom, #E7DFD8, #FAF7F0);
+}
+
+.floral-collection::after {
+    background: linear-gradient(to bottom, #FAF7F0, #E7DFD8);
+}
+
+.collection.noir-collection {
+    padding-bottom: 65px;
+}
+
+.noir-collection::after {
+    display: none;
+}
+
 
 
 /*---------- Responsive Design ----------*/
