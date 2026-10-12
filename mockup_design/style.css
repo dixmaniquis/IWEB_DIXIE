@@ -1374,3 +1374,321 @@ header nav > ul {
 }
 
 /*---------- ABOUTPAGE CSS ----------*/
+
+/*---------- About Hero ----------*/
+.about-hero {
+    position: relative;
+    width: 100%;
+    height: 550px;
+    overflow: hidden;
+}
+
+.about-hero > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.about-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+}
+
+.about-hero-text {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    z-index: 1;
+    color: #FAF7F0;
+    max-width: 650px;
+}
+
+.about-hero-text p:first-child {
+    font-family: "Montserrat", sans-serif;
+    font-size: 13px;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
+
+.about-hero-text h1 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 55px;
+    font-weight: 500;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.about-hero-text p:last-child {
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/*---------- Our Story ----------*/
+.about-story {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 70px;
+    padding: 100px 10%;
+    background-color: #FAF7F0;
+}
+
+.story-text {
+    flex: 1;
+}
+
+.story-text > p:first-child,
+.craftsmanship-text > p:first-child {
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.story-text h2,
+.craftsmanship-text h2 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 42px;
+    font-weight: 500;
+    line-height: 1.15;
+    margin-bottom: 25px;
+}
+
+.story-text p:not(:first-child),
+.craftsmanship-text > p:not(:first-child) {
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    line-height: 1.9;
+    color: #55514B;
+    margin-bottom: 18px;
+}
+
+.story-image {
+    flex: 1;
+    min-width: 0;
+}
+
+.story-image img {
+    display: block;
+    width: 100%;
+    height: 470px;
+    object-fit: cover;
+}
+
+/*---------- Our Philosophy ----------*/
+.about-philosophy {
+    padding: 85px 10%;
+    background-color: #EDE7DC;
+    text-align: center;
+}
+
+.philosophy-title > p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.philosophy-title h2 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 42px;
+    font-weight: 500;
+    margin-bottom: 55px;
+}
+
+.philosophy-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.philosophy-item {
+    padding: 25px 15px;
+}
+
+.philosophy-item h3 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 18px;
+}
+
+.philosophy-item p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 13px;
+    line-height: 1.9;
+    color: #55514B;
+}
+
+/*---------- Craftsmanship ----------*/
+.about-craftsmanship {
+    display: flex;
+    align-items: center;
+    gap: 70px;
+    padding: 100px 10%;
+    background-color: #FAF7F0;
+}
+
+.craftsmanship-image {
+    flex: 1;
+    min-width: 0;
+}
+
+.craftsmanship-image img {
+    display: block;
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+}
+
+.craftsmanship-text {
+    flex: 1;
+}
+
+.craftsmanship-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 30px;
+}
+
+.craftsmanship-tags span {
+    font-family: "Montserrat", sans-serif;
+    font-size: 11px;
+    padding: 10px 15px;
+    border: 1px solid #B7AA98;
+    border-radius: 30px;
+    color: #4D463D;
+}
+
+/*---------- Collection Call to Action ----------*/
+.about-collection {
+    padding: 90px 20px;
+    text-align: center;
+    background-color: #EDE7DC;
+}
+
+.about-collection h2 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 42px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.about-collection p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    line-height: 1.9;
+    color: #55514B;
+    margin-bottom: 30px;
+}
+
+.about-collection a {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #29251F;
+    color: #FAF7F0;
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.about-collection a:hover {
+    background-color: #6B5D4B;
+}
+
+/*---------- About Page Responsive Layout ----------*/
+@media screen and (max-width: 768px) {
+    .about-hero {
+        height: 430px;
+    }
+
+    .about-hero-text {
+        left: 7%;
+        right: 7%;
+    }
+
+    .about-hero-text h1 {
+        font-size: 38px;
+    }
+
+    .about-story,
+    .about-craftsmanship {
+        flex-direction: column;
+        gap: 35px;
+        padding: 60px 7%;
+    }
+
+    .story-image,
+    .craftsmanship-image {
+        width: 100%;
+    }
+
+    .story-image img,
+    .craftsmanship-image img {
+        height: 350px;
+    }
+
+    .story-text h2,
+    .craftsmanship-text h2,
+    .philosophy-title h2,
+    .about-collection h2 {
+        font-size: 34px;
+    }
+
+    .about-philosophy {
+        padding: 60px 7%;
+    }
+
+    .philosophy-content {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .philosophy-item {
+        padding: 15px 10px;
+    }
+
+    .about-collection {
+        padding: 65px 7%;
+    }
+
+    .about-collection p br {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .about-hero {
+        height: 350px;
+    }
+
+    .about-hero-text h1 {
+        font-size: 31px;
+    }
+
+    .about-hero-text p:last-child {
+        font-size: 12px;
+    }
+
+    .story-image img,
+    .craftsmanship-image img {
+        height: 280px;
+    }
+
+    .craftsmanship-tags {
+        gap: 8px;
+    }
+
+    .craftsmanship-tags span {
+        font-size: 10px;
+        padding: 8px 11px;
+    }
+}
