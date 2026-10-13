@@ -1643,40 +1643,49 @@ header nav > ul {
 /*---------- Collection Call to Action ----------*/
 
 .about-collection {
-    padding: 90px 20px;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
     text-align: center;
-    background-color: #EDE7DC;
+    background-color: #F0E6D7;
+    box-sizing: border-box;
 }
 
 .about-collection h2 {
-    font-family: "Cormorant Garamond", serif;
-    font-size: 42px;
-    font-weight: 500;
-    margin-bottom: 20px;
+    font-family: "Bodoni Moda", serif;
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 10px;
 }
 
 .about-collection p {
+    max-width: 650px;
     font-family: "Montserrat", sans-serif;
-    font-size: 14px;
-    line-height: 1.9;
-    color: #55514B;
-    margin-bottom: 30px;
+    font-size: 20px;
+    line-height: 1.3;
+    letter-spacing: 2%;
+    margin-bottom: 25px;
 }
 
 .about-collection a {
     display: inline-block;
-    padding: 15px 30px;
-    background-color: #29251F;
-    color: #FAF7F0;
+    padding: 10px 35px;
+    border: 2px solid rgba(63, 62, 61, 0.288);
+    border-radius: 10px;
+    background-color: #FAF7F0;
+    color: #000;
     font-family: "Montserrat", sans-serif;
-    font-size: 12px;
-    letter-spacing: 1.5px;
+    font-size: 14px;
+    font-weight: 400;
     text-decoration: none;
     transition: background-color 0.3s ease;
 }
 
 .about-collection a:hover {
-    background-color: #6B5D4B;
+    background-color: #E7DFD8;
 }
 
 /*---------- About Page Responsive Layout ----------*/
