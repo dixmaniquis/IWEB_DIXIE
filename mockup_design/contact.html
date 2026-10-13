@@ -34,10 +34,11 @@
     </header>
 
     <section class = "contact-info">
-        <div class = "contact-item">
-            <div class = "contact-icon">
-                <img src = "img/location.svg" alt = "Location">
-            </div>
+        <div class="contact-item">
+            <a href="https://www.google.com/maps/search/?api=1&query=82+Rue+de+Lumiere+Paris+France"
+            class="contact-icon" target="_blank" rel="noopener noreferrer">
+                <img src="img/location.svg" alt="Location">
+            </a>
 
             <div class = "contact-text">
                 <h3>Visit Our Boutique</h3>
@@ -45,10 +46,10 @@
             </div>
         </div>
 
-        <div class = "contact-item">
-            <div class = "contact-icon">
-                <img src = "img/social3.svg" alt = "Email">
-            </div>
+        <div class="contact-item">
+            <a href="mailto:dixiemaniquis@gmail.com" class="contact-icon">
+                <img src="img/social3.svg" alt="Email">
+            </a>
 
             <div class = "contact-text">
                 <h3>Email</h3>
@@ -56,10 +57,10 @@
             </div>
         </div>
 
-        <div class = "contact-item">
-            <div class = "contact-icon">
-                <img src = "img/phone.svg" alt = "Phone">
-            </div>
+        <div class="contact-item">
+            <a href="tel:+33123456789" class="contact-icon">
+                <img src="img/phone.svg" alt="Phone">
+            </a>
 
             <div class = "contact-text">
                 <h3>Phone</h3>
@@ -68,7 +69,7 @@
         </div>
     </section>
 
-    <section class = "contact-form-section">
+    <section class = "contact-main">
         <img src = "img/lumera-place.jpg" alt = "Luméra boutique">
 
         <div class = "boutique-hours">
@@ -97,14 +98,13 @@
             </div>
         </div>
 
-        <div class = "contact-message">
+        <div class = "contact-form-container">
             <h2>Send Us a Message</h2>
 
-            <form action = "#" method = "post">
-                <div class = "contact-form-row">
-                    <input type = "text" name = "full-name" placeholder = "Full Name" aria-label = "Full Name" required>
-
-                    <input type = "email" name = "email" placeholder = "Email Address" aria-label = "Email Address" required>
+            <form class = "contact-form" action = "#" method = "post">
+                <div class="form-row">
+                    <input type="text" name="full-name" placeholder="Full Name" required>
+                    <input type="email" name="email" placeholder="Email Address" required>
                 </div>
 
                 <input type = "text" name = "subject" placeholder = "Subject" aria-label = "Subject" required>
