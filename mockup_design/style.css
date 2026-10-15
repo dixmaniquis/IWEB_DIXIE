@@ -2297,15 +2297,34 @@ header nav > ul {
 
 @media screen and (max-width: 768px) {
     .scents-hero {
-        height: 400px;
+        height: 600px;
+        text-align: center;
     }
 
-    .scents-intro h1 {
-        font-size: 30px;
+    .scents-hero-text h1 {
+        font-size: clamp(42px, 3.1vw, 42px);
+    }
+
+    .scents-hero-text p {
+        font-size: clamp(24px, 1.75vw, 24px);
+        max-width: 600px;
+    }
+
+    .scents-intro {
+        min-height: clamp(263px, 26vw, 343px);
+        margin-top: -13px;
+    }
+
+    .scents-intro h2 {
+        font-size: 32px;
+        letter-spacing: 1px;
     }
 
     .scents-intro p {
-        font-size: 14px;
+        max-width: 680px;
+        font-size: 20px;
+        line-height: 1.05;
+        letter-spacing: 1px;
     }
 
     .collection {
@@ -2383,7 +2402,7 @@ header nav > ul {
 
 @media screen and (max-width: 480px) {
     .scents-hero {
-        height: 300px;
+        height: 400px;
     }
 
     .scents-intro {
@@ -2417,16 +2436,24 @@ header nav > ul {
 
 @media screen and (max-width: 768px) {
     .about-hero {
-        height: 430px;
-    }
-
-    .about-hero-text {
-        left: 7%;
-        right: 7%;
+        height: 600px;
+        text-align: center;
     }
 
     .about-hero-text h1 {
-        font-size: 38px;
+        font-size: clamp(42px, 3.1vw, 42px);
+        line-height: 55px;
+    }
+
+    .about-hero-text p:first-child {
+        text-align: center;
+        margin-inline: auto;
+    }
+
+    .about-hero-text p {
+        font-size: clamp(24px, 1.75vw, 24px);
+        max-width: 600px;
+        margin-inline: auto;
     }
 
     .about-story,
