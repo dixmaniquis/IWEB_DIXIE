@@ -2579,6 +2579,29 @@ header nav > ul {
         height: 100%;
     }
 
+    .scents-hero-text {
+        top: 80px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        padding: 0 24px;
+        text-align: center;
+    }
+
+    .scents-hero-text h1 {
+        font-size: 26px;
+        line-height: 1.5;
+        margin-bottom: 14px;
+        text-wrap: balance;
+    }
+
+    .scents-hero-text p {
+        font-size: clamp(13px, 3.8vw, 15px);
+        line-height: 1.4;
+        max-width: 17em;
+        margin: 0 auto;
+    }
+
     .scents-intro {
         min-height: 0;
         margin-top: 0;
@@ -2587,7 +2610,7 @@ header nav > ul {
 
     .scents-intro h2 {
         font-size: 26px;
-        line-height: 32px;
+        line-height: 31.5px;
     }
 
     .scents-intro p {
@@ -2606,17 +2629,88 @@ header nav > ul {
     }
 
     .scent-card {
-        height: 320px;
+        flex-basis: clamp(180px, 56vw, 230px);
+        width: clamp(180px, 56vw, 230px);
+        height: auto;
+        aspect-ratio: 0.68;
+    }
+
+    .collection-carousel .carousel-arrow {
+        width: 30px;
+        height: 30px;
+        padding: 6px;
+    }
+
+    .collection-carousel .carousel-arrow img {
+        width: 14px;
+        height: 14px;
+    }
+
+    .collection-carousel {
+        padding: 0 32px;
+    }
+
+    .collection-carousel,
+    .scent-track {
+        min-height: 0;
+    }
+
+    .collection-title {
+        margin-bottom: 20px;
+    }
+
+    .collection-carousel {
+        margin-top: 0;
+    }
+
+    .scent-info {
+        position: relative;
+        z-index: 1;
+    }
+
+    .scent-title {
+        font-size: 13px;
+        letter-spacing: 1.5px;
+        bottom: 22px;
+    }
+
+    .scent-title::after {
+        width: 80%;
     }
 
     .info-toggle {
-        min-width: 220px;
-        padding: 12px 18px;
+        min-width: 0;
+        width: clamp(180px, 56vw, 230px);
+        justify-content: space-between;
+        gap: 12px;
+        padding: 10px 16px;
         font-size: 10px;
+        letter-spacing: 0.8px;
+    }
+
+    .info-toggle .info-arrow {
+        width: 12px;
+        height: 12px;
     }
 
     .info-column h3 {
         font-size: 23px;
+    }
+
+    .scent-card[data-name="Snow Pearl"] img {
+        transform: scale(1.25) translate(-1.7%, 2.6%);
+    }
+
+    .scent-card[data-name="Lumiére Bloom"] img {
+        transform: scale(1.5) translate(12%, -2.6%);
+    }
+
+    .scent-card[data-name="Mimosa Moonlight"] img {
+        transform: scale(1.2) translate(2.8%, 7.7%);
+    }
+
+    .scent-card[data-name="Rosé Étoile"] img {
+        transform: scale(1.2) translate(0, -1.3%);
     }
 }
 
