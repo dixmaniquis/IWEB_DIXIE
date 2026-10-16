@@ -2216,11 +2216,11 @@ header nav > ul {
     }
 
     .intro h2 {
-        font-size: 28px;
+        font-size: 26px;
     }
 
     .intro p {
-        font-size: 16px;
+        font-size: 14px;
         line-height: 1.3;
     }
 
@@ -2569,13 +2569,32 @@ header nav > ul {
     }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 600px) {
     .scents-hero {
-        height: 400px;
+        height: 495px;
+    }
+
+    .scents-hero video,
+    .scents-hero::after {
+        height: 100%;
     }
 
     .scents-intro {
-        padding: 40px 20px;
+        min-height: 0;
+        margin-top: 0;
+        padding: 60px 24px;
+    }
+
+    .scents-intro h2 {
+        font-size: 26px;
+        line-height: 32px;
+    }
+
+    .scents-intro p {
+        max-width: 650px;
+        font-size: 14px;
+        line-height: 1.3;
+        letter-spacing: 5%;
     }
 
     .collection-title span {
