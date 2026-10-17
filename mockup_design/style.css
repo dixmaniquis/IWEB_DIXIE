@@ -854,7 +854,7 @@ header nav > ul {
 }
 
 .scent-card[data-name="Rosé Étoile"] img {
-    transform: scale(1.50) translate(35px, -10px);
+    transform: scale(1.50) translate(35px, 1px);
 }
 
 .scent-card[data-name="Mimosa Moonlight"] img {
