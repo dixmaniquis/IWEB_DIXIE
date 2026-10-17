@@ -97,3 +97,20 @@ document.querySelectorAll('.footer-nav a').forEach(link => {
         }
     });
 });
+
+// ---------- Print ----------
+const heroVideo = document.querySelector('.scents-hero video');
+
+if (heroVideo) {
+    const printFrame = document.createElement('canvas');
+    printFrame.className = 'print-frame';
+    heroVideo.after(printFrame);
+
+    // Right before printing, copy the video's current frame onto the canvas
+    window.addEventListener('beforeprint', () => {
+        if (!heroVideo.videoWidth) return;
+        printFrame.width = heroVideo.videoWidth;
+        printFrame.height = heroVideo.videoHeight;
+        printFrame.getContext('2d').drawImage(heroVideo, 0, 0);
+    });
+}

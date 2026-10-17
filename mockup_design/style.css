@@ -3339,3 +3339,255 @@ footer {
         transition-duration: 0.01s;
     }
 }
+
+/*---------- Print Layout ----------*/
+
+.print-frame {
+    display: none;
+}
+
+@media print {
+    @page {
+        margin: 0.4in;
+    }
+
+    * {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    header,
+    .hero,
+    .best-seller,
+    .collection,
+    .card,
+    .feature,
+    .experience,
+    .socials,
+    footer {
+        break-inside: avoid;
+    }
+
+    .menu-toggle,
+    .collection-carousel .carousel-arrow {
+        display: none !important;
+    }
+
+    .hero {
+        height: 340px;
+    }
+
+    .hero-left img,
+    .hero-right img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .hero-text h1 {
+        font-size: 36px;
+    }
+
+    .hero-text p {
+        font-size: 20px;
+    }
+
+    .scents-hero,
+    .about-hero,
+    .contact-hero {
+        height: 340px;
+    }
+
+    .contact-hero {
+        height: 400px;
+    }
+
+    .about-hero > img,
+    .contact-hero > img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .scents-hero::after {
+        height: 100%;
+    }
+
+    .scents-hero {
+        height: 380px;
+    }
+
+    .scents-hero-text {
+        top: 58%;
+    }
+
+    .scents-hero-text h1 {
+        font-size: 32px;
+        margin-bottom: 0;
+    }
+
+    .scents-hero-text p {
+        font-size: 18px;
+        margin-top: 10px;
+    }
+
+    .scents-hero {
+        background-color: #3a3330;
+    }
+
+    .scents-hero video {
+        display: none;
+    }
+
+    .scents-hero .print-frame {
+        display: block;
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .best-seller {
+        padding: 40px 3% 50px;
+    }
+
+    .cards {
+        gap: 24px;
+    }
+
+    .card {
+        flex: 0 0 200px;
+        width: 200px;
+        height: auto;
+        padding-bottom: 5px;
+    }
+
+    .card img {
+        height: 172px;
+    }
+
+    .card:nth-child(1) img {
+        left: -3px;
+    }
+
+    .card:nth-child(2) img {
+        left: -12px;
+    }
+
+    .card:nth-child(3) img {
+        left: -3px;
+    }
+
+    .card p {
+        margin: 14px 18px 14px;
+    }
+
+    .card h3 {
+        margin: 18px 12px 8px;
+    }
+
+    .card h3::after {
+        width: 140px;
+    }
+
+    .collection-carousel {
+        min-height: 320px;
+        padding: 0 10px;
+    }
+
+    .scent-track {
+        min-height: 300px;
+        --shift: 112%;
+    }
+
+    .scent-card {
+        flex-basis: 200px;
+        width: 200px;
+        height: 270px;
+    }
+
+    .scent-card[data-name="Vanilla Eclair"] img {
+        transform: scale(1.25) translate(-1.7%, 2.6%);
+    }
+
+    .scent-card[data-name="Rosé Étoile"] img {
+        transform: scale(1.5) translate(12%, -2.6%);
+    }
+
+    .scent-card[data-name="Mimosa Moonlight"] img {
+        transform: scale(1.2) translate(2.8%, 7.7%);
+    }
+
+    .scent-card[data-name="Midnight Santal"] img {
+        transform: scale(1.2) translate(0, -1.3%);
+    }
+
+    .scent-title {
+        font-size: 14px;
+        bottom: 20px;
+    }
+
+    .scent-title::after {
+        width: 150px;
+    }
+
+    .collection::after {
+        display: none;
+    }
+
+    .collection {
+        padding: 30px 7% 40px;
+    }
+
+    .info-panel {
+        margin: 15px 0 0;
+        padding: 25px 20px;
+    }
+
+    .features {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 20px;
+        padding: 30px 5%;
+    }
+
+    .feature:nth-child(n) {
+        transform: none;
+    }
+
+    .feature::after {
+        display: none;
+    }
+
+    .footer-nav {
+        width: 85%;
+        gap: 40px;
+        flex-wrap: nowrap;
+    }
+
+    .contact-item:nth-child(n) > * {
+        transform: none;
+    }
+
+    .contact-item::after {
+        display: none;
+    }
+
+    .contact-main {
+        break-inside: avoid;
+    }
+
+    .socials {
+        transform: none;
+        padding: 40px 20px 0;
+        gap: 100px;
+    }
+
+    .experience-text {
+        transform: none;
+        padding: 20px 30px;
+    }
+}
